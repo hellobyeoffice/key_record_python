@@ -1,14 +1,13 @@
 import keyboard
 import os
-import lines
 import pyautogui
-import time
+import pyperclip
 from pathlib import Path
+import time
 
-from PIL.Image import new
 
 # 저장할 파일 이름 지정 (따옴표 필수)
-file_name = "mouse_move"
+file_name = ". (9).txt"
 file_path = os.path.abspath(file_name)
 
 
@@ -17,7 +16,7 @@ def record_coordinate(): #좌표 기록
   log_text = f"{x}, {y}\n"
 
   try:
-    with open(file_path, "a", encoding="UTF-8") as f:
+    with open(file_name, "a", encoding="UTF-8") as f:
       f.write(log_text)
       f.flush()
     print(f"[기록됨] X: {x}, Y: {y} -> {file_path}")
@@ -39,10 +38,14 @@ def record_key(event):
     with open(file_path, 'a', encoding='utf-8') as f:
       f.write(key)
 
-
 def save_notepad(filename, content): #메모장 기록 및 저장
   with open(filename, 'w', encoding='utf-8') as f:
     f.write(content)
+
+def find_notepad(name,extension):
+    file = Path(name).rglob(f"*{extension}")
+    pyperclip.copy(str(name.resolve()))
+    print("경로 확인")
 
 def mouse_control():
     with open(file_name, 'r', encoding='utf-8') as f:
@@ -80,44 +83,466 @@ def move_cursor_right():
     f.write("right\n")
     print("input right")
 
-def find_file(filename):
-  target_file = Path()
-  for filename in target_file.glob("*.txt"):
-    with open(filename, 'r', encoding='utf-8') as file:
-      content = file.read()
 
 
-def aaa(event):
-  if event.event_type == keyboard.KEY_DOWN:
-    key = event.name
 
-    if key == "space":
-      key = " "
-    elif key == "enter":
-      key = "\n"
-    elif key == "backspace":
-      key = "-back"
+def mouse_move1():
+    file_name = ". (1).txt"
+    file_path = os.path.abspath(file_name)
 
-    # 각각의 키가 눌릴 때마다 콘솔에 한 줄씩 표시
-    print(f"입력된 키: {key}")
+    with open(file_name, 'r', encoding='utf-8') as f:
+        data = f.readlines()
 
-    with open(file_path, 'a', encoding='utf-8') as f:
-      f.write(key)
-      f.write("+")
+    for line in data:
+        line = line.strip()
+
+        if not line:
+            continue
+
+        if line == "left":
+            pyautogui.click(button="left")
+            print("왼쪽 클릭")
+
+        elif line == "right":
+            pyautogui.click(button="right")
+            print("오른쪽 클릭")
+
+        else:
+            mx, my = line.split(',')
+            mx = int(mx.strip())
+            my = int(my.strip())
+
+            pyautogui.moveTo(mx, my)
+            print(f"마우스 이동: {mx}, {my}")
+def mouse_move2():
+    file_name = ". (2).txt"
+    file_path = os.path.abspath(file_name)
+
+    with open(file_name, 'r', encoding='utf-8') as f:
+        data = f.readlines()
+
+    for line in data:
+        line = line.strip()
+
+        if not line:
+            continue
+
+        if line == "left":
+            pyautogui.click(button="left")
+            print("왼쪽 클릭")
+
+        elif line == "right":
+            pyautogui.click(button="right")
+            print("오른쪽 클릭")
+
+        else:
+            mx, my = line.split(',')
+            mx = int(mx.strip())
+            my = int(my.strip())
+
+            pyautogui.moveTo(mx, my)
+            print(f"마우스 이동: {mx}, {my}")
+def mouse_move3():
+    file_name = ". (3).txt"
+    file_path = os.path.abspath(file_name)
+
+    with open(file_name, 'r', encoding='utf-8') as f:
+        data = f.readlines()
+
+    for line in data:
+        line = line.strip()
+
+        if not line:
+            continue
+
+        if line == "left":
+            pyautogui.click(button="left")
+            print("왼쪽 클릭")
+
+        elif line == "right":
+            pyautogui.click(button="right")
+            print("오른쪽 클릭")
+
+        else:
+            mx, my = line.split(',')
+            mx = int(mx.strip())
+            my = int(my.strip())
+
+            pyautogui.moveTo(mx, my)
+            print(f"마우스 이동: {mx}, {my}")
+def mouse_move4():
+    file_name = ". (4).txt"
+    file_path = os.path.abspath(file_name)
+
+    with open(file_name, 'r', encoding='utf-8') as f:
+        data = f.readlines()
+
+    for line in data:
+        line = line.strip()
+
+        if not line:
+            continue
+
+        if line == "left":
+            pyautogui.click(button="left")
+            print("왼쪽 클릭")
+
+        elif line == "right":
+            pyautogui.click(button="right")
+            print("오른쪽 클릭")
+
+        else:
+            mx, my = line.split(',')
+            mx = int(mx.strip())
+            my = int(my.strip())
+
+            pyautogui.moveTo(mx, my)
+            print(f"마우스 이동: {mx}, {my}")
+def mouse_move5():
+    file_name = ". (5).txt"
+    file_path = os.path.abspath(file_name)
+
+    with open(file_name, 'r', encoding='utf-8') as f:
+        data = f.readlines()
+
+    for line in data:
+        line = line.strip()
+
+        if not line:
+            continue
+
+        if line == "left":
+            pyautogui.click(button="left")
+            print("왼쪽 클릭")
+
+        elif line == "right":
+            pyautogui.click(button="right")
+            print("오른쪽 클릭")
+
+        else:
+            mx, my = line.split(',')
+            mx = int(mx.strip())
+            my = int(my.strip())
+
+            pyautogui.moveTo(mx, my)
+            print(f"마우스 이동: {mx}, {my}")
+def mouse_move6():
+    file_name = ". (6).txt"
+    file_path = os.path.abspath(file_name)
+
+    with open(file_name, 'r', encoding='utf-8') as f:
+        data = f.readlines()
+
+    for line in data:
+        line = line.strip()
+
+        if not line:
+            continue
+
+        if line == "left":
+            pyautogui.click(button="left")
+            print("왼쪽 클릭")
+
+        elif line == "right":
+            pyautogui.click(button="right")
+            print("오른쪽 클릭")
+
+        else:
+            mx, my = line.split(',')
+            mx = int(mx.strip())
+            my = int(my.strip())
+
+            pyautogui.moveTo(mx, my)
+            print(f"마우스 이동: {mx}, {my}")
+def mouse_move7():
+    file_name = ". (7).txt"
+    file_path = os.path.abspath(file_name)
+
+    with open(file_name, 'r', encoding='utf-8') as f:
+        data = f.readlines()
+
+    for line in data:
+        line = line.strip()
+
+        if not line:
+            continue
+
+        if line == "left":
+            pyautogui.click(button="left")
+            print("왼쪽 클릭")
+
+        elif line == "right":
+            pyautogui.click(button="right")
+            print("오른쪽 클릭")
+
+        else:
+            mx, my = line.split(',')
+            mx = int(mx.strip())
+            my = int(my.strip())
+
+            pyautogui.moveTo(mx, my)
+            print(f"마우스 이동: {mx}, {my}")
+def mouse_move8():
+    file_name = ". (8).txt"
+    file_path = os.path.abspath(file_name)
+
+    with open(file_name, 'r', encoding='utf-8') as f:
+        data = f.readlines()
+
+    for line in data:
+        line = line.strip()
+
+        if not line:
+            continue
+
+        if line == "left":
+            pyautogui.click(button="left")
+            print("왼쪽 클릭")
+
+        elif line == "right":
+            pyautogui.click(button="right")
+            print("오른쪽 클릭")
+
+        else:
+            mx, my = line.split(',')
+            mx = int(mx.strip())
+            my = int(my.strip())
+
+            pyautogui.moveTo(mx, my)
+            print(f"마우스 이동: {mx}, {my}")
+def mouse_move9():
+    file_name = ". (9).txt"
+    file_path = os.path.abspath(file_name)
+
+    with open(file_name, 'r', encoding='utf-8') as f:
+        data = f.readlines()
+
+    for line in data:
+        line = line.strip()
+
+        if not line:
+            continue
+
+        if line == "left":
+            pyautogui.click(button="left")
+            print("왼쪽 클릭")
+
+        elif line == "right":
+            pyautogui.click(button="right")
+            print("오른쪽 클릭")
+
+        else:
+            mx, my = line.split(',')
+            mx = int(mx.strip())
+            my = int(my.strip())
+
+            pyautogui.moveTo(mx, my)
+            print(f"마우스 이동: {mx}, {my}")
+def mouse_move10():
+    file_name = ". (10).txt"
+    file_path = os.path.abspath(file_name)
+
+    with open(file_name, 'r', encoding='utf-8') as f:
+        data = f.readlines()
+
+    for line in data:
+        line = line.strip()
+
+        if not line:
+            continue
+
+        if line == "left":
+            pyautogui.click(button="left")
+            print("왼쪽 클릭")
+
+        elif line == "right":
+            pyautogui.click(button="right")
+            print("오른쪽 클릭")
+
+        else:
+            mx, my = line.split(',')
+            mx = int(mx.strip())
+            my = int(my.strip())
+
+            pyautogui.moveTo(mx, my)
+            print(f"마우스 이동: {mx}, {my}")
+def mouse_move11():
+    file_name = ". (11).txt"
+    file_path = os.path.abspath(file_name)
+
+    with open(file_name, 'r', encoding='utf-8') as f:
+        data = f.readlines()
+
+    for line in data:
+        line = line.strip()
+
+        if not line:
+            continue
+
+        if line == "left":
+            pyautogui.click(button="left")
+            print("왼쪽 클릭")
+
+        elif line == "right":
+            pyautogui.click(button="right")
+            print("오른쪽 클릭")
+
+        else:
+            mx, my = line.split(',')
+            mx = int(mx.strip())
+            my = int(my.strip())
+
+            pyautogui.moveTo(mx, my)
+            print(f"마우스 이동: {mx}, {my}")
+def mouse_move12():
+    file_name = ". (12).txt"
+    file_path = os.path.abspath(file_name)
+
+    with open(file_name, 'r', encoding='utf-8') as f:
+        data = f.readlines()
+
+    for line in data:
+        line = line.strip()
+
+        if not line:
+            continue
+
+        if line == "left":
+            pyautogui.click(button="left")
+            print("왼쪽 클릭")
+
+        elif line == "right":
+            pyautogui.click(button="right")
+            print("오른쪽 클릭")
+
+        else:
+            mx, my = line.split(',')
+            mx = int(mx.strip())
+            my = int(my.strip())
+
+            pyautogui.moveTo(mx, my)
+            print(f"마우스 이동: {mx}, {my}")
+def mouse_move13():
+    file_name = ". (13).txt"
+    file_path = os.path.abspath(file_name)
+
+    with open(file_name, 'r', encoding='utf-8') as f:
+        data = f.readlines()
+
+    for line in data:
+        line = line.strip()
+
+        if not line:
+            continue
+
+        if line == "left":
+            pyautogui.click(button="left")
+            print("왼쪽 클릭")
+
+        elif line == "right":
+            pyautogui.click(button="right")
+            print("오른쪽 클릭")
+
+        else:
+            mx, my = line.split(',')
+            mx = int(mx.strip())
+            my = int(my.strip())
+
+            pyautogui.moveTo(mx, my)
+            print(f"마우스 이동: {mx}, {my}")
+def mouse_move14():
+    file_name = ". (14).txt"
+    file_path = os.path.abspath(file_name)
+
+    with open(file_name, 'r', encoding='utf-8') as f:
+        data = f.readlines()
+
+    for line in data:
+        line = line.strip()
+
+        if not line:
+            continue
+
+        if line == "left":
+            pyautogui.click(button="left")
+            print("왼쪽 클릭")
+
+        elif line == "right":
+            pyautogui.click(button="right")
+            print("오른쪽 클릭")
+
+        else:
+            mx, my = line.split(',')
+            mx = int(mx.strip())
+            my = int(my.strip())
+
+            pyautogui.moveTo(mx, my)
+            print(f"마우스 이동: {mx}, {my}")
+def mouse_moveg():
+    file_name = ". (g).txt"
+    file_path = os.path.abspath(file_name)
+
+    with open(file_name, 'r', encoding='utf-8') as f:
+        data = f.readlines()
+
+    for line in data:
+        line = line.strip()
+
+        if not line:
+            continue
+
+        if line == "left":
+            pyautogui.click(button="left")
+            print("왼쪽 클릭")
+
+        elif line == "right":
+            pyautogui.click(button="right")
+            print("오른쪽 클릭")
+
+        else:
+            mx, my = line.split(',')
+            mx = int(mx.strip())
+            my = int(my.strip())
+
+            pyautogui.moveTo(mx, my)
+            print(f"마우스 이동: {mx}, {my}")
 
 
-if input() == "record":
-    keyboard.add_hotkey("alt+s", move_cursor_left)
-    keyboard.add_hotkey("alt+d", move_cursor_right)
-    keyboard.add_hotkey("alt+f", record_coordinate)
 
-    print("단축키 감지 중... ESC를 누르면 종료")
+keyboard.add_hotkey("alt+f", record_coordinate)
+keyboard.add_hotkey("alt+s", move_cursor_left)
+keyboard.add_hotkey("alt+d", move_cursor_right)
+keyboard.wait("esc")
 
-    keyboard.wait("esc")
-elif input() == "move":
-    print("동작을 시작합니다.")
-    keyboard.add_hotkey("alt+s", mouse_control)
-    keyboard.wait("esc")
-else:
-    print("에러")
 
+keyboard.add_hotkey("alt+q", mouse_move1)
+keyboard.add_hotkey("alt+w", mouse_move2)
+keyboard.add_hotkey("alt+e", mouse_move3)
+keyboard.add_hotkey("alt+r", mouse_move4)
+
+
+keyboard.add_hotkey("alt+s", mouse_move1)
+keyboard.add_hotkey("alt+a", mouse_move2)
+keyboard.add_hotkey("alt+d", mouse_move3)
+keyboard.add_hotkey("alt+f", mouse_move4)
+keyboard.add_hotkey("alt+g", mouse_moveg)
+
+
+keyboard.add_hotkey("alt+z", mouse_move5)
+keyboard.add_hotkey("alt+x", mouse_move6)
+keyboard.add_hotkey("alt+c", mouse_move7)
+keyboard.add_hotkey("alt+v", mouse_move8)
+
+keyboard.add_hotkey("alt+1", mouse_move10)
+keyboard.add_hotkey("alt+2", mouse_move11)
+keyboard.add_hotkey("alt+`", mouse_move12)
+keyboard.add_hotkey("alt+4", mouse_move13)
+
+keyboard.add_hotkey("shift+g", mouse_move9)
+
+
+print("단축키 감지 중...")
+
+keyboard.wait("esc")
+
+keyboard.unhook_all()
