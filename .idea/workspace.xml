@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0dbdd5ec-85b1-4349-9fb4-4f3bdd8603a9" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/. (6).txt" beforeDir="false" afterPath="$PROJECT_DIR$/. (6).txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/. (9).txt" beforeDir="false" afterPath="$PROJECT_DIR$/. (9).txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.(9)" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/key_record.py" beforeDir="false" afterPath="$PROJECT_DIR$/key_record.py" afterDir="false" />
-    </list>
+    <list default="true" id="0dbdd5ec-85b1-4349-9fb4-4f3bdd8603a9" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
